@@ -1,0 +1,26 @@
+<template>
+<p>Shop</p>
+</template>
+
+<script>
+
+export default {
+    name: 'Shop',
+   
+        data(){
+        return{
+
+        }
+    },
+    methods:{
+
+    },
+    computed:{
+
+    }
+}
+</script>
+
+<style scoped>
+
+</style>
