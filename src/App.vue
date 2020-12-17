@@ -1,6 +1,6 @@
 <template>
 
-<div class="w3-top">
+<div class="w3-top menu-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s2">
       <router-link to="/" class="w3-button w3-block w3-black">HOME</router-link>
@@ -152,5 +152,22 @@ body, html {
 
 .menu {
   display: none;
+}
+
+.menu-top{
+  display: relative;
+  z-index: 2000;
+}
+@media screen and (max-width: 600px) {
+    .w3-row {
+        display: flex!important;
+        flex-direction: column!important;
+        align-items: center!important;
+    }
+    .w3-top{
+      position:relative;
+
+    }
+    
 }
 </style>

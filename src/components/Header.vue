@@ -1,7 +1,7 @@
 <template>
 <div class="bgimg">
     <h1 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">The Cafe</span></h1>
-    <div class="w3-display-right w3-padding-48" name="fade"> <img class="imgheader" v-show="count % 2" :src="slides[index].src"> </div>
+    <div class="w3-display-right w3-padding-50" > <transition name="fade" ><img class="imgheader" v-show="count" :src="slides[index].src"></transition> </div>
     <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Open from 6am to 5pm</span></h2>
     <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">15 Adr street, 5015</span></h2>
 </div>
@@ -44,7 +44,7 @@ title:"Caroussel",
 
     },
     mounted(){
-        setInterval( ()=>{this.count++},1000 );
+        setInterval( ()=>{this.count++},5000 );
         setInterval( ()=>{
             if (this.index<this.slides.length - 1){
                 this.index++
@@ -52,7 +52,7 @@ title:"Caroussel",
                 this.index = 0;
             }
         
-        },1000 );
+        },5000 );
     }
 }
 
@@ -62,7 +62,19 @@ title:"Caroussel",
             width:300px;
         }
         .fade-enter-active{
-            animation: fade-in .5s;
+            animation: fade-in .9s;
+        }
+        .fade-leave-active{
+            animation: fade-in .9s reverse;
+        }
+        .w3-padding-50{
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-block-end: 200px;
+        }
+        .w3-tag{
+            position:relative;
+            z-index: 1000;
         }
         
         @keyframes fade-in{
