@@ -77,11 +77,7 @@ export default {
     },
     
     methods:{
-addToCart( product ){
-           /*  this.cart.push( product );
-            this.totalPrice += product.price;
-            this.displayCart = true;
-            console.log('Total Price: ',this.totalPrice ); */
+        addToCart( product ){
             this.$emit("addEmit", product)
         },
         animate(){
