@@ -1,11 +1,14 @@
 <template>
-<p>contact</p>
+<div class="w3-container" >
+    <p>{{ $route.params }}</p>
+
+</div>
 </template>
 
 <script>
 
 export default {
-    name: 'Contact',
+    name: 'Product',
    
         data(){
         return{
