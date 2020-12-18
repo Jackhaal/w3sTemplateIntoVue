@@ -2,7 +2,9 @@
 <div class="bgimg">
     <h1 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">The Cafe</span></h1>
     <div class="w3-display-right w3-padding-50" > 
-        <button class="w3-button w3-black" @click="indexMinus()">&lt;</button><transition name="fade" ><img id="imgheader" class="imgheader" v-show="count" :src="slides[index].src">
+        <button class="w3-button w3-black" @click="indexMinus()">&lt;</button>
+        <transition name="fade" >
+            <img id="imgheader" class="imgheader" v-show="count" :src="slides[index].src">
         </transition> 
         <button class="w3-button w3-black" @click="indexPlus()">></button>
     </div>
@@ -92,7 +94,7 @@ export default {
         }
         .w3-tag{
             position:relative;
-            z-index: 1000;
+            z-index: 1;
         }
         
         @keyframes fade-in{

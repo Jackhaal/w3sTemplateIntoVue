@@ -20,9 +20,10 @@
     
     <div class="w3-col s2">
                 <a href="#" class="w3-right w3-button w3-bar-item" @click="animate()">({{cart.length}}) <i class="fa fa-shopping-cart"></i>  SHOPPING CART</a>
-            </div>
-
-            <!-- cart -->
+            </div>         
+  </div>
+</div>
+<!-- cart -->
             <transition name="slide" >
             <div class="w3-right w3-border" v-show="display">
                 <table class="w3-table w3-white">
@@ -50,8 +51,6 @@
                 </table>
             </div>
         </transition>
-  </div>
-</div>
 <Header />
 <div class="w3-sand w3-grayscale w3-large">
     <router-view @addEmit="addToCart($event)" />
@@ -156,7 +155,7 @@ body, html {
 
 .menu-top{
   display: relative;
-  z-index: 2000;
+  z-index: 2;
 }
 @media screen and (max-width: 600px) {
     .w3-row {
@@ -168,6 +167,15 @@ body, html {
       position:relative;
 
     }
-    
+    .w3-padding-50{
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-block-end: 0!important;
+            padding-bottom: 200px!important;
+        }
+    slide div.w3-right{
+      position: relative; 
+      z-index: 3;
+    }
 }
 </style>
