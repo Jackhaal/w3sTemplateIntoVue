@@ -15,21 +15,21 @@
     </form>
 
     <table v-show="currentUrl.Name" class="w3-table w3-white">
-                    <tr>
-                        <th>Name</th>
-                        <th>How many people</th>
-                        <th>Date</th>
-                        <th>Message</th>
+      <tr>
+          <th>Name</th>
+          <th>How many people</th>
+          <th>Date</th>
+          <th>Message</th>
 
-                    </tr>
-                    <tr>
-                        <td>{{currentUrl.Name}}</td>
-                        <td>{{currentUrl.People}}</td>
-                        <td>{{currentUrl.date}}</td>
-                        <td>{{currentUrl.Message}}</td>
-                    </tr>
-                  
-                </table>
+      </tr>
+      <tr>
+          <td>{{currentUrl.Name}}</td>
+          <td>{{currentUrl.People}}</td>
+          <td>{{currentUrl.date}}</td>
+          <td>{{currentUrl.Message}}</td>
+      </tr>
+    
+    </table>
   </div>
 </div>
 

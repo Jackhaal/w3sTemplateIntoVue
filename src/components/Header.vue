@@ -1,7 +1,11 @@
 <template>
 <div class="bgimg">
     <h1 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">The Cafe</span></h1>
-    <div class="w3-display-right w3-padding-50" > <transition name="fade" ><img class="imgheader" v-show="count" :src="slides[index].src"></transition> </div>
+    <div class="w3-display-right w3-padding-50" > 
+        <button class="w3-button w3-black" @click="indexMinus()">&lt;</button><transition name="fade" ><img id="imgheader" class="imgheader" v-show="count" :src="slides[index].src">
+        </transition> 
+        <button class="w3-button w3-black" @click="indexPlus()">></button>
+    </div>
     <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Open from 6am to 5pm</span></h2>
     <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">15 Adr street, 5015</span></h2>
 </div>
@@ -14,7 +18,7 @@ export default {
 
     data(){
         return{
-title:"Caroussel",
+        title:"Caroussel",
         index:0,
         count:0,
         slides:[
@@ -38,7 +42,20 @@ title:"Caroussel",
         }
     },
     methods:{
-
+        indexPlus(){
+            if (this.index<this.slides.length - 1){
+                this.index++;
+            } else {
+                this.index = 0;
+            }
+        },
+        indexMinus(){
+            if (this.index>0){
+                this.index=this.index -1;
+            } else {
+                this.index = this.slides.length -1;
+            }
+        }
     },
     computed:{
 
@@ -53,6 +70,7 @@ title:"Caroussel",
             }
         
         },5000 );
+        
     }
 }
 
