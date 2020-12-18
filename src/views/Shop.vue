@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style scoped>
-img{
-    width:100%;
-}
+    img{
+        width:100%;
+    }
 </style>
